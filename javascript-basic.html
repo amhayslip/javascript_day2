@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Javascript Bare</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var reservation1 = "Bob";
+var reservation2 = "Carl";
+var reservation3 = "Bob2";
+
+var reservation1Claimed = false;
+var reservation2Claimed = false;
+var reservation3Claimed = false;
+
+var running = true;
+/* Set all your reservation data here */
+
+while (running) {
+  var name = prompt('What is your name?');
+   console.log(name);
+  	if (name === reservation1 && reservation1Claimed == false) {
+  		alert("Welcome, your table is right this way.");
+  		reservation1Claimed = true;
+  		  	}  	
+  	else if (name === reservation1 && reservation1Claimed == true) {
+  		alert("Someone has already arrived for this reservation.");
+  	}  	
+  	if (name === reservation2 && reservation2Claimed == false) {
+  		alert("Welcome, your table is right this way.");
+  		reservation2Claimed = true;
+  	}  	
+  	else if (name === reservation2 && reservation2Claimed == true) {
+  		alert("Someone has already arrived for this reservation.");
+  	}  if (name === reservation3 && reservation3Claimed == false) {
+  		alert("Welcome, your table is right this way.");
+  		reservation3Claimed = true;
+  	}  	
+  	else if (name === reservation3 && reservation3Claimed == true) {
+  		alert("Someone has already arrived for this reservation.");
+  	}  
+
+  	else if (name !== reservation1 || name !== reservation2 || name !== reservation3) {
+  		alert("Please make a reservation.");
+  	}
+  	if (name === 'exit') {
+    // This breaks out of the while loop
+       break;
+  }		
+}
+</script>
+
+</body>
+</html>
